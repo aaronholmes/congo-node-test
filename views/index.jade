@@ -3,3 +3,15 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+
+.row
+	#breadcrumbs.span12
+
+script(src="/javascripts/congo/index.js")
+
+script
+	Congo.BreadcrumbView = Backbone.View.extend({
+		render: function(){
+			$(this.el).html("<h1>Databases</h1>");
+		}
+	})
